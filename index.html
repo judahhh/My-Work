@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2 id="hello">안녕하세요</h2>
+<h2 id="hi">올때메로나</h2>
+<h2 id="title">멍청이</h2>
+<h4 id="test">안녕하세요</h4>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script>
+      //웹환경에서 자바스크립트의 목적 = html조작과 변경
+      document.getElementById('hello').innerHTML='안녕';//이건 이해보다 외울것
+      document.getElementById('hi').innerHTML='올때바밤바';
+      $('#title').html('바보');
+      $('#test').addClass('yellow-bg');
+      //html안에 onclick쓰던거를 자바스크립트와 html
+      //분리하기 위해서 addEventListner사용-->document.getElementById().addEventListner('click',function(){});
+      //이것도 너무 길어서 제이쿼리 나옴->자바스크립트=제이쿼리
+      //$(#블라블라).on('click',function(){});
+      //document.getElementById().innerHTML('')->$(#블라블라).html('');
+      //$('#title').text('바보'); 
+      //$('#title').html('<p>바보</p>'); 
+      //$('#title').css('color', 'red'); 
+
+  </script>
+</body>
+</html> 

@@ -1,0 +1,50 @@
+.main-background{
+background-image: url(background.jpg);
+background-size:cover;
+color: white;
+border-radius: 0px;
+}
+.black-background{
+    background: rgba(0, 0, 0, 0.5);
+    position:fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* margin-top: -1200px; */
+    /* 애니메이션 할 때
+    margin, width, height, top, left, bottom, right 얘네 
+    건드리지 말것 -> 브라우저는 레이아웃을 변경하면 렌더링시간이 매우 오래걸림*/
+    /* 대신 transform 쓰기 */
+    transition: all 1s; 
+    transform: translateY(-1000px);
+  
+}
+.white-background{
+    background:white;
+    width: 80%;
+    margin:100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+.nav-sub{
+    display: none;
+}
+.email-alert{
+    display: none;
+}
+.left-menu{
+    width: 150px;
+    height: 100%;
+    background-color:black;
+    color: white;
+    position: fixed;
+    margin-left: -150px;
+    /* 메뉴바 일단 숨겨 놓기 위해 */
+}

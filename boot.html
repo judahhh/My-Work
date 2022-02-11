@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Hello, world!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+<div class="left-menu">
+  <p>Menu Title</p>
+</div>
+
+
+
+
+
+    <!-- <h3 id="hi">안녕</h3> -->
+    <script>
+     
+      //jQuery animate() 함수
+
+      // $('#hi').click(function(){
+        // $('#hi').animate({marginLeft:'100px'},5000);//camelCase
+      // });//5000ms, 5초 동안 애니메이션 됨
+
+      //콤마로 데이터 구분하기
+     // $('#hi').animate({marginLeft:'100px',marginTop:'100px'
+    //});//camelCase
+     
+    </script>
+
+      <div class="black-background" >
+          <div class="white-background">
+              <p>로그인하세요</p>
+
+
+                <form action="">
+                    <div class="form-group">
+                        <input id="email" type="email" 
+                        class="form-control"
+                        placeholder="Email">
+                        <p class="email-alert">이메일을 입력하세요</p>
+                    </div>
+                   
+                    <!-- 이메일이 빈칸인 경우 전송을 막는 기능을 추가해보자 -->
+                    <div class="form-group">
+                        <input type="password"
+                        class="form-control"
+                        placeholder="Password">
+                    </div>
+                    <button type="submit"
+                    class="btn btn-primary">전송</button>
+                </form>
+              <button class="btn btn-danger" id="close">
+                  닫기
+              </button>
+          </div>
+      </div>
+
+      <div class="nav-menu">
+         <h4 style="margin: 0;">Shirts Studio</h4> 
+         <a id="nav-sub-button" >Products</a>
+      </div>
+
+      <ul class="list-group nav-sub">
+        <li class="list-group-item">Outer</li>
+        <li class="list-group-item">Top</li>
+        <li class="list-group-item">Bottom</li>
+       
+      </ul>
+
+
+
+
+    <div class="jumbotron main-background">
+        <h1 class="display-4">Shirts Studio</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a id="login" class="btn btn-primary btn-lg" href="#" role="button">
+          Log In</a>
+
+          <a id="show-menu" class="btn btn-danger btn-lg" href="#" role="button">
+           Show Menu</a>
+      </div>
+      <script>
+        $('#show-menu').click(function(){
+          $('.left-menu').animate({marginLeft:'0px'},600);
+        });
+
+
+
+      </script>
+
+    <!-- 
+      애니메이션 UI 만드는 법
+
+1. HTML CSS로 시작화면과 최종화면 만들기
+
+2. 자바스크립트로 최종화면으로 변하도록 트리거하기
+
+3. 스무스한 동작은 animate 함수 사용 -> 요즘엔 잘 안씀 ->스무스한 동작 css동작 씀
+-->
+    <script>
+         //폼 전송 시 공백체크 기능
+        $('form').on('submit',function(e){//전송될때 폼태그 전체를 선택해줘야함($('form'))
+            if($('#email').val()==''){
+            e.preventDefault();
+            $('.email-alert').show();
+
+            }
+        });
+        
+        //login 모달창 UI
+        $('#login').on('click',function(){
+        $('.black-background').css('transform','translateY(0px)');
+        });
+        
+        //navbar menu
+        $('#nav-sub-button').click(function(){
+        $('.nav-sub').slideToggle();
+        });
+
+        //닫기
+         $('#close').click(function(){
+         $('.black-background').fadeOut();
+        });
+    </script>
+
+  </body>
+</html>
+
+
